@@ -12,8 +12,8 @@
 - 4.如何全局捕获Native发生的异常？
 
 > [点击查看答案(仅供参考,等笔者研究研究)](https://blog.csdn.net/qq_22654613/article/details/87883403)
-（https://www.cnblogs.com/heweiquan/p/10973201.html）
 
+> [上面答案失效，new一个](https://www.cnblogs.com/heweiquan/p/10973201.html)
 Native层Crash捕获机制
 Native层代码的错误可以分为两种。
 C++异常：
