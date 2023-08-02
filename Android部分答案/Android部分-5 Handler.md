@@ -46,6 +46,12 @@
 - 10.Looper死循环为什么不会导致应用卡死？
 
 > [点击查看答案](https://www.jianshu.com/p/cfe50b8b0a41)
+> [这个答案回答挺好](https://www.jianshu.com/p/4b52800e3523)
+Looper无限循环如何导致阻塞的
+Looper无限循环是Looper不停取MessageQueen中的Message并执行这个message的一种机制。我们的APP中的事件，如Activity的生命周期切换、点击、长按、滑动、都是依赖这种机制。
+如果主线程的MessageQueue中没有消息，便会阻塞在Loop的queue.next()中的nativePollOnce方法。这个时候主线程会进入休眠状态并释放CPU资源，如果下一个消息到达或者有事物发生，通过向pipe管道写入数据来进行唤醒主线程工作。
+Looper无限循环为啥没有ANR?
+Looper循环的阻塞是在消息队列无消息需要处理时的一种机制，这种机制就是让CPU停下来去做别的事。而且消息队列无消息，那么就是需要需要让cpu停下来，避免cpu空转，这个机制和ANR是没有关系的，完全不是同一个事，所以自然不会导致ANR
 
 - 11.使用Handler的postDealy后消息队列有什么变化？
 

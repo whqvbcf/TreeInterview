@@ -9,3 +9,7 @@
 - 2.谈谈你项目中内存优化的一些经验。
 
 > [点击查看答案](https://www.cnblogs.com/ldq2016/p/6635774.html)
+
+- 3.让你实现一个memoryleaker的检测器怎么入手。
+
+考虑下LeakCanary的原理（https://blog.csdn.net/BUGgogogo/article/details/118683255）
